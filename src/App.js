@@ -14,6 +14,7 @@ function App() {
         >
           WazaCode Student at Microverse : click here to visit my Github.
         </a>
+        <h1>Hello World</h1>
       </header>
     </div>
   );

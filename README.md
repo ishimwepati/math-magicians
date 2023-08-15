@@ -17,7 +17,6 @@ https://github.com/ishimwepati/math-magicians/tree/setup
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -62,14 +61,6 @@ https://github.com/ishimwepati/math-magicians/tree/setup
 
 > - Added Linters
 > - React
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo" target="_blank"></a>
-
-- [Click here to see it Live ]( https://ishimwepati.github.io/math-magicians/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
