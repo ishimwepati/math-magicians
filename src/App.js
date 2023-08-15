@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        WazaCode Student at Microverse
       </header>
     </div>
   );
