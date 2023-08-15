@@ -12,9 +12,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          WazaCode Student at Microverse : click here to visit my Github.
+          Click here to visit my Github.
         </a>
         <h1>Hello World</h1>
+        <h2>Welcome</h2>
       </header>
     </div>
   );
