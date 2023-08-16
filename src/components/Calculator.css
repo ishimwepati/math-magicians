@@ -7,19 +7,17 @@
   }
   
   .display {
-    background-color: #f5f5f5;
+    background-color: #505050;
     border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px;
     text-align: right;
     font-size: 24px;
-    margin-bottom: 10px;
+    color: white;
   }
   
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
   }
   
   /* Add more styles for buttons if needed */
