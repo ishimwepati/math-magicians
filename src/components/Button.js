@@ -16,12 +16,12 @@ function Button({ label, isOperator, gridColumnSpan }) {
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   isOperator: PropTypes.bool,
-  gridColumnSpan: PropTypes.number, // Add this propType
+  gridColumnSpan: PropTypes.number,
 };
 
 Button.defaultProps = {
   isOperator: false,
-  gridColumnSpan: 1, // Default to 1 column
+  gridColumnSpan: 1,
 };
 
 export default Button;
