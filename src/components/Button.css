@@ -2,14 +2,13 @@
   width: 100%;
   padding: 15px;
   font-size: 18px;
-  background-color: #D4D4D2;
+  background-color: #d4d4d2;
   border: 1px solid #ccc;
-  border-radius: 0px;
+  border-radius: 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .operator {
-  background-color: #FF9500 ; /* Default background color for operator buttons */
+  background-color: #ff9500; /* Default background color for operator buttons */
 }
-
