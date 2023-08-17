@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './QuoteDisplay.css'; // Make sure to import your CSS file
+import './QuoteDisplay.css';
 
 function QuoteDisplay() {
   const [quote, setQuote] = useState('');
