@@ -1,29 +1,28 @@
 .quote-container {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #d7cfcfe4;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  
-  .quote {
-    text-align: center;
-  }
-  
-  .quote-text {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .quote-author {
-    margin-top: 5px;
-    font-style: italic;
-  }
-  
-  .error-message {
-    color: red;
-    text-align: center;
-  }
-  
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #d7cfcfe4;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.quote {
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.quote-author {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
