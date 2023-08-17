@@ -1,46 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './QuoteDisplay.css';
+import './QuoteDisplay.css'; // Make sure to import your CSS file
 
 function QuoteDisplay() {
   const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    const apiUrl = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
-
-    const headers = {
-      'X-Api-Key': 'Ynra9XHiA4ZSA+O1ZPEx8Q==r5YLGKlKiQnALROo',
+    const fetchQuote = async () => {
+      try {
+        const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=happiness', {
+          headers: {
+            'X-Api-Key': 'Ynra9XHiA4ZSA+O1ZPEx8Q==r5YLGKlKiQnALROo',
+          },
+        });
+        const randomQuote = response.data[0];
+        setQuote(randomQuote);
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to fetch quote');
+        setLoading(false);
+      }
     };
 
-    axios.get(apiUrl, { headers })
-      .then((response) => {
-        const { quote, author } = response.data[0];
-        setQuote(quote);
-        setAuthor(author);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching quote:', error);
-        setLoading(false);
-      });
+    fetchQuote();
   }, []);
 
-  return (
-    <div className="quote-container">
-      {loading && <p>Loading...</p>}
-      {!loading && (
-        <div className="quote">
-          <p className="quote-text">{quote}</p>
-          <p className="quote-author">
-            -
-            {author}
-          </p>
-        </div>
-      )}
-    </div>
-  );
+  let quoteContent;
+  if (loading) {
+    quoteContent = <p className="quote loading">Loading...</p>;
+  } else if (error) {
+    quoteContent = <p className="quote error-message">{error}</p>;
+  } else {
+    quoteContent = (
+      <div className="quote">
+        <p className="quote-text">{quote.quote}</p>
+        <p className="quote-author">
+          -
+          {quote.author}
+        </p>
+      </div>
+    );
+  }
+
+  return <div className="quote-container">{quoteContent}</div>;
 }
 
 export default QuoteDisplay;
