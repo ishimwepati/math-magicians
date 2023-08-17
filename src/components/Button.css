@@ -12,3 +12,6 @@
 .operator {
   background-color: #ff9500;
 }
+.button:hover{
+  background-color: #ccc;
+}
