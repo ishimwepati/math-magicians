@@ -9,14 +9,20 @@ function Calculator() {
     next: null,
     operation: null,
   });
-
   const handleButtonClick = (buttonName) => {
-    const newCalculation = calculate(calculation, buttonName);
-    if (newCalculation.next !== null || newCalculation.total !== null) {
-      setCalculation(newCalculation);
+    if (buttonName === 'AC') {
+      setCalculation({
+        total: null,
+        next: null,
+        operation: null,
+      });
+    } else {
+      const newCalculation = calculate(calculation, buttonName);
+      if (newCalculation.next !== null || newCalculation.total !== null) {
+        setCalculation(newCalculation);
+      }
     }
   };
-
   const handleSubtraction = () => {
     handleButtonClick('-'); // Call the general handler with the operation
   };
