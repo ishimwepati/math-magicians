@@ -6,7 +6,7 @@
 
   <h3><b>Math Magicians Project</b></h3>
 
-https://github.com/ishimwepati/math-magicians/tree/design
+https://github.com/ishimwepati/math-magicians/tree/events
 
 </div>
 
@@ -63,6 +63,7 @@ https://github.com/ishimwepati/math-magicians/tree/design
 > - Added Linters
 > - React
 > - Beautiful design added
+> - All Math Operations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
