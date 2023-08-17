@@ -6,7 +6,7 @@
 
   <h3><b>Math Magicians Project</b></h3>
 
-https://github.com/ishimwepati/math-magicians/tree/setup
+https://github.com/ishimwepati/math-magicians/tree/design
 
 </div>
 
@@ -41,6 +41,7 @@ https://github.com/ishimwepati/math-magicians/tree/setup
 
 1. React JS
 2. Linters
+3. CSS
 
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -61,6 +62,7 @@ https://github.com/ishimwepati/math-magicians/tree/setup
 
 > - Added Linters
 > - React
+> - Beautiful design added
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,0 +1,14 @@
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #d4d4d2;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.operator {
+  background-color: #ff9500;
+}
