@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Calculator.css';
-import Button from './Button'; // Assuming you have the Button component
+import Button from './Button';
 import calculate from '../logic/calculate';
 
 function Calculator() {
@@ -24,7 +24,7 @@ function Calculator() {
     }
   };
   const handleSubtraction = () => {
-    handleButtonClick('-'); // Call the general handler with the operation
+    handleButtonClick('-');
   };
 
   const handleAddition = () => {
