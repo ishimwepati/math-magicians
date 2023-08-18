@@ -6,7 +6,7 @@
 
   <h3><b>Math Magicians Project</b></h3>
 
-https://github.com/ishimwepati/math-magicians/tree/events
+https://github.com/ishimwepati/math-magicians/tree/API
 
 </div>
 
@@ -42,6 +42,7 @@ https://github.com/ishimwepati/math-magicians/tree/events
 1. React JS
 2. Linters
 3. CSS
+4. API to fecth quotes
 
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -64,6 +65,7 @@ https://github.com/ishimwepati/math-magicians/tree/events
 > - React
 > - Beautiful design added
 > - All Math Operations
+> - The API to fetch quotes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
