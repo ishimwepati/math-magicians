@@ -19,7 +19,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   isOperator: PropTypes.bool,
   gridColumnSpan: PropTypes.number,
-  onClick: PropTypes.func.isRequired, // Add this line to specify onClick as a required prop
+  onClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

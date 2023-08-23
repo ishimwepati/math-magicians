@@ -5,7 +5,7 @@ import {
 import Home from './components/Home';
 import Calculator from './components/Calculator';
 import Quote from './components/Quote';
-import './AppRouter.css'; // Import the CSS file
+import './AppRouter.css';
 
 const AppRouter = () => (
   <Router>
@@ -14,7 +14,6 @@ const AppRouter = () => (
         <h1>Math Magicians</h1>
       </div>
       <div className="navbar">
-        {/* Navigation Links */}
         <nav>
           <ul>
             <li>
@@ -30,8 +29,6 @@ const AppRouter = () => (
         </nav>
       </div>
     </div>
-
-    {/* Define Routes */}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/calculator" element={<Calculator />} />

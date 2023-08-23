@@ -1,25 +1,24 @@
 /* AppRouter.css */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 10px;
-  }
-  
-  .navbar a {
-    color: white; /* Optional: Set link color */
-    text-decoration: none; /* Optional: Remove underlines */
-    text-decoration: solid;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.navbar a {
+  color: white; /* Optional: Set link color */
+  text-decoration: none; /* Optional: Remove underlines */
+  text-decoration: solid;
+}
