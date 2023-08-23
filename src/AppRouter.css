@@ -1,15 +1,24 @@
-.navbar ul {
+/* AppRouter.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Optional: Add a background color */
+    padding: 10px; /* Optional: Add some padding */
+    color: white;
+  }
+  
+  .navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
     gap: 10px;
-    margin-left: 70%;
   }
-
+  
   .navbar a {
-    color: rgb(8, 8, 8);
-    text-decoration: none;
+    color: white; /* Optional: Set link color */
+    text-decoration: none; /* Optional: Remove underlines */
     text-decoration: solid;
   }
   
