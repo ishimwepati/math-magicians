@@ -3,9 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Optional: Add a background color */
-    padding: 10px; /* Optional: Add some padding */
+    background-color: #333;
+    padding: 10px;
     color: white;
+    margin-bottom: 10px;
   }
   
   .navbar ul {
