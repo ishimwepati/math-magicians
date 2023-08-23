@@ -1,0 +1,15 @@
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    margin-left: 70%;
+  }
+
+  .navbar a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    text-decoration: solid;
+  }
+  
