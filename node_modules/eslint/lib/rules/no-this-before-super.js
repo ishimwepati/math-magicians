@@ -34,15 +34,15 @@ function isConstructorFunction(node) {
 // Rule Definition
 //------------------------------------------------------------------------------
 
+/** @type {import('../shared/types').Rule} */
 module.exports = {
     meta: {
         type: "problem",
 
         docs: {
-            description: "disallow `this`/`super` before calling `super()` in constructors",
-            category: "ECMAScript 6",
+            description: "Disallow `this`/`super` before calling `super()` in constructors",
             recommended: true,
-            url: "https://eslint.org/docs/rules/no-this-before-super"
+            url: "https://eslint.org/docs/latest/rules/no-this-before-super"
         },
 
         schema: [],

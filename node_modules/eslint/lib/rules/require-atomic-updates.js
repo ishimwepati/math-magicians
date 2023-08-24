@@ -79,6 +79,9 @@ function isLocalVariableWithoutEscape(variable, isMemberAccess) {
         reference.from.variableScope === functionScope);
 }
 
+/**
+ * Represents segment information.
+ */
 class SegmentInfo {
     constructor() {
         this.info = new WeakMap();
@@ -162,34 +165,47 @@ class SegmentInfo {
 // Rule Definition
 //------------------------------------------------------------------------------
 
+/** @type {import('../shared/types').Rule} */
 module.exports = {
     meta: {
         type: "problem",
 
         docs: {
-            description: "disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
-            category: "Possible Errors",
+            description: "Disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
             recommended: false,
-            url: "https://eslint.org/docs/rules/require-atomic-updates"
+            url: "https://eslint.org/docs/latest/rules/require-atomic-updates"
         },
 
         fixable: null,
-        schema: [],
+
+        schema: [{
+            type: "object",
+            properties: {
+                allowProperties: {
+                    type: "boolean",
+                    default: false
+                }
+            },
+            additionalProperties: false
+        }],
 
         messages: {
-            nonAtomicUpdate: "Possible race condition: `{{value}}` might be reassigned based on an outdated value of `{{value}}`."
+            nonAtomicUpdate: "Possible race condition: `{{value}}` might be reassigned based on an outdated value of `{{value}}`.",
+            nonAtomicObjectUpdate: "Possible race condition: `{{value}}` might be assigned based on an outdated state of `{{object}}`."
         }
     },
 
     create(context) {
-        const sourceCode = context.getSourceCode();
+        const allowProperties = !!context.options[0] && context.options[0].allowProperties;
+
+        const sourceCode = context.sourceCode;
         const assignmentReferences = new Map();
         const segmentInfo = new SegmentInfo();
         let stack = null;
 
         return {
-            onCodePathStart(codePath) {
-                const scope = context.getScope();
+            onCodePathStart(codePath, node) {
+                const scope = sourceCode.getScope(node);
                 const shouldVerify =
                     scope.type === "function" &&
                     (scope.block.async || scope.block.generator);
@@ -273,13 +289,25 @@ module.exports = {
                         const variable = reference.resolved;
 
                         if (segmentInfo.isOutdated(codePath.currentSegments, variable)) {
-                            context.report({
-                                node: node.parent,
-                                messageId: "nonAtomicUpdate",
-                                data: {
-                                    value: sourceCode.getText(node.parent.left)
-                                }
-                            });
+                            if (node.parent.left === reference.identifier) {
+                                context.report({
+                                    node: node.parent,
+                                    messageId: "nonAtomicUpdate",
+                                    data: {
+                                        value: variable.name
+                                    }
+                                });
+                            } else if (!allowProperties) {
+                                context.report({
+                                    node: node.parent,
+                                    messageId: "nonAtomicObjectUpdate",
+                                    data: {
+                                        value: sourceCode.getText(node.parent.left),
+                                        object: variable.name
+                                    }
+                                });
+                            }
+
                         }
                     }
                 }
