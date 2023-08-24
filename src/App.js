@@ -1,13 +1,11 @@
 import React from 'react';
-import Calculator from './components/Calculator';
-import QuoteDisplay from './components/QuoteDisplay';
 import './App.css';
+import AppRouter from './AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <Calculator />
-      <QuoteDisplay />
+      <AppRouter />
     </div>
   );
 }
