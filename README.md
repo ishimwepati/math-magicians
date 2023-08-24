@@ -4,7 +4,7 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>Math Magicians Project</b></h3>
+  <h3><b>Math Magicians Full Website Project</b></h3>
 
 https://github.com/ishimwepati/math-magicians/tree/API
 
