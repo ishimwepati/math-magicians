@@ -4,9 +4,9 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>Math Magicians Project</b></h3>
+  <h3><b>Math Magicians Full Website Project</b></h3>
 
-https://github.com/ishimwepati/math-magicians/tree/API
+https://github.com/ishimwepati/math-magicians/tree/full-website-Page
 
 </div>
 
@@ -35,7 +35,7 @@ https://github.com/ishimwepati/math-magicians/tree/API
 <!-- INTRO -->
 # 📖 LeaderBoard <a name="about-project"></a>
 
-> This is a Math Magicians project built React JS.
+> This is a full website Math Magicians project built React JS.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,6 +43,7 @@ https://github.com/ishimwepati/math-magicians/tree/API
 2. Linters
 3. CSS
 4. API to fecth quotes
+5. Multiple Pages
 
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -66,6 +67,7 @@ https://github.com/ishimwepati/math-magicians/tree/API
 > - Beautiful design added
 > - All Math Operations
 > - The API to fetch quotes
+> - Multiple pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,6 +103,7 @@ Now in your termonal do this :
 
 > - First : "npm install" : to install all npm dependencies
 > - Then type "npm run build"
+> - npm install react-router-dom
 
 ### Usage
 
